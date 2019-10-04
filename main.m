@@ -136,6 +136,8 @@ for delta = [0 5 10]
     
     % Pick the best SDR value after the end of the so-called
     % increase-decrease method.
+    
+    % Variable final_SDR_2 provides the SDR values for proposed ACOSQ 2-2
     for i = 1 : SIZE
         index = find (noise == i) ;
         hold_var  = myFinal_SDR_2(index) ;
@@ -147,6 +149,7 @@ for delta = [0 5 10]
     end
     myFinal_SDR_3 = max(Final_SDR_3 , [] , 1) ;
     final_SDR_3 = zeros(SIZE , 1) ;
+    % Variable final_SDR_3 provides the SDR values for proposed ACOSQ 2-1-1
     for i = 1 : SIZE
         index = find (noise == i) ;
         hold_var  = myFinal_SDR_3(index) ;
